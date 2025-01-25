@@ -10,7 +10,7 @@ router = routers.DefaultRouter()
 router.register(r'users', UserViewSet, basename='user')  
 
 
-urlpatterns = [
+urlpatterns = [    
     path('menu-item/', views.MenuItemView.as_view()),
     path('menu-item/<int:pk>', views.SingleMenuItemView.as_view()),
     path('message/', views.msg),

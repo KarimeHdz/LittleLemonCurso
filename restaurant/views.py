@@ -1,4 +1,4 @@
-#from django.shortcuts import render
+from django.shortcuts import render
 #from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 #from .models import MenuItem 
 #from .serializers import MenuItemSerializer
@@ -24,8 +24,8 @@ from .serializers import UserSerializer
 #def sayHello(request):
 #    return HttpResponse('Hello world')
 
-#def index(request):
-#    return render(request, 'index.html')
+def index(request):
+    return render(request, 'index.html')
 
 
 class MenuItemView(generics.ListCreateAPIView):

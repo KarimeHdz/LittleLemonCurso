@@ -2,13 +2,14 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from rest_framework.authtoken.views import obtain_auth_token
-from .views import MenuItemView, SingleMenuItemView, MenuItemViewSet, BookingViewSet
+from .views import MenuItemView, SingleMenuItemView, MenuItemViewSet, BookingViewSet, index
 
 router = DefaultRouter()
 router.register(r'menu', MenuItemViewSet, basename='menuitem')
 router.register(r'booking', BookingViewSet, basename='booking')
 
 urlpatterns = [
+    path('', index, name='index'),
     # Incluye las rutas generadas automáticamente por el enrutador
     path('', include(router.urls)),
     #path('menu/', MenuItemView.as_view()),
